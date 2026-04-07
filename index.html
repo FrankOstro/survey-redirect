@@ -1,105 +1,98 @@
-{\rtf1\ansi\ansicpg1251\cocoartf2868
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регистрация</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f3;
+      font-family: -apple-system, sans-serif;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+    h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; color: #1a1a1a; }
+    p { font-size: 14px; color: #666; margin-bottom: 28px; line-height: 1.5; }
+    label { display: block; font-size: 13px; font-weight: 500; color: #444; margin-bottom: 6px; }
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus { border-color: #4a7cf7; }
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 13px;
+      background: #1a1a1a;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    button:hover { opacity: 0.85; }
+    button:disabled { opacity: 0.5; cursor: default; }
+    .status { margin-top: 14px; font-size: 13px; color: #666; text-align: center; min-height: 20px; }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>Перед началом</h1>
+  <p>Укажите номер проекта, чтобы мы знали, кто прошёл опрос. После этого вы будете автоматически перенаправлены.</p>
+  <label for="name">Ваше имя и фамилия</label>
+  <input type="text" id="name" placeholder="Иван Иванов" autocomplete="name">
+  <button id="btn" onclick="submit()">Перейти к опросу →</button>
+  <div class="status" id="status"></div>
+</div>
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="ru">\
-<head>\
-  <meta charset="UTF-8">\
-  <meta name="viewport" content="width=device-width, initial-scale=1">\
-  <title>\uc0\u1056 \u1077 \u1075 \u1080 \u1089 \u1090 \u1088 \u1072 \u1094 \u1080 \u1103 </title>\
-  <style>\
-    * \{ box-sizing: border-box; margin: 0; padding: 0; \}\
-    body \{\
-      min-height: 100vh;\
-      display: flex;\
-      align-items: center;\
-      justify-content: center;\
-      background: #f5f5f3;\
-      font-family: -apple-system, sans-serif;\
-    \}\
-    .card \{\
-      background: white;\
-      border-radius: 16px;\
-      padding: 40px 36px;\
-      width: 100%;\
-      max-width: 420px;\
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);\
-    \}\
-    h1 \{ font-size: 22px; font-weight: 600; margin-bottom: 8px; color: #1a1a1a; \}\
-    p \{ font-size: 14px; color: #666; margin-bottom: 28px; line-height: 1.5; \}\
-    label \{ display: block; font-size: 13px; font-weight: 500; color: #444; margin-bottom: 6px; \}\
-    input \{\
-      width: 100%;\
-      padding: 12px 14px;\
-      border: 1px solid #ddd;\
-      border-radius: 10px;\
-      font-size: 15px;\
-      outline: none;\
-      transition: border-color 0.2s;\
-    \}\
-    input:focus \{ border-color: #4a7cf7; \}\
-    button \{\
-      width: 100%;\
-      margin-top: 20px;\
-      padding: 13px;\
-      background: #1a1a1a;\
-      color: white;\
-      border: none;\
-      border-radius: 10px;\
-      font-size: 15px;\
-      font-weight: 500;\
-      cursor: pointer;\
-      transition: opacity 0.2s;\
-    \}\
-    button:hover \{ opacity: 0.85; \}\
-    button:disabled \{ opacity: 0.5; cursor: default; \}\
-    .status \{ margin-top: 14px; font-size: 13px; color: #666; text-align: center; min-height: 20px; \}\
-  </style>\
-</head>\
-<body>\
-<div class="card">\
-  <h1>\uc0\u1055 \u1077 \u1088 \u1077 \u1076  \u1085 \u1072 \u1095 \u1072 \u1083 \u1086 \u1084 </h1>\
-  <p>\uc0\u1059 \u1082 \u1072 \u1078 \u1080 \u1090 \u1077  \u1085 \u1086 \u1084 \u1077 \u1088  \u1087 \u1088 \u1086 \u1077 \u1082 \u1090 \u1072 , \u1095 \u1090 \u1086 \u1073 \u1099  \u1084 \u1099  \u1079 \u1085 \u1072 \u1083 \u1080 , \u1082 \u1090 \u1086  \u1087 \u1088 \u1086 \u1096 \u1105 \u1083  \u1086 \u1087 \u1088 \u1086 \u1089 . \u1055 \u1086 \u1089 \u1083 \u1077  \u1101 \u1090 \u1086 \u1075 \u1086  \u1074 \u1099  \u1073 \u1091 \u1076 \u1077 \u1090 \u1077  \u1072 \u1074 \u1090 \u1086 \u1084 \u1072 \u1090 \u1080 \u1095 \u1077 \u1089 \u1082 \u1080  \u1087 \u1077 \u1088 \u1077 \u1085 \u1072 \u1087 \u1088 \u1072 \u1074 \u1083 \u1077 \u1085 \u1099 .</p>\
-  <label for="name">\uc0\u1042 \u1072 \u1096 \u1077  \u1080 \u1084 \u1103  \u1080  \u1092 \u1072 \u1084 \u1080 \u1083 \u1080 \u1103 </label>\
-  <input type="text" id="name" placeholder="\uc0\u1048 \u1074 \u1072 \u1085  \u1048 \u1074 \u1072 \u1085 \u1086 \u1074 " autocomplete="name">\
-  <button id="btn" onclick="submit()">\uc0\u1055 \u1077 \u1088 \u1077 \u1081 \u1090 \u1080  \u1082  \u1086 \u1087 \u1088 \u1086 \u1089 \u1091  \u8594 </button>\
-  <div class="status" id="status"></div>\
-</div>\
-\
-<script>\
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzU8VsofIe4sy3HZXpV0X2kzceqSKYuY1LyJ15aAWzg7AwBBttvzE2imQXK3ZHvQ9zw/exec';\
-  const SURVEY_URL = \'91\uc0\u1089 \u1089 \u1099 \u1083 \u1082 \u1072  \'91\u1085 \u1072  \u1086 \u1087 \u1088 \u1086 \u1089 ;\
-\
-  async function submit() \{\
-    const name = document.getElementById('name').value.trim();\
-    if (!name) \{\
-      document.getElementById('status').textContent = '\uc0\u1055 \u1086 \u1078 \u1072 \u1083 \u1091 \u1081 \u1089 \u1090 \u1072 , \u1074 \u1074 \u1077 \u1076 \u1080 \u1090 \u1077  \u1074 \u1072 \u1096 \u1077  \u1080 \u1084 \u1103 .';\
-      return;\
-    \}\
-\
-    const btn = document.getElementById('btn');\
-    btn.disabled = true;\
-    document.getElementById('status').textContent = '\uc0\u1057 \u1086 \u1093 \u1088 \u1072 \u1085 \u1103 \u1077 \u1084  \u1076 \u1072 \u1085 \u1085 \u1099 \u1077 ...';\
-\
-    try \{\
-      await fetch(SCRIPT_URL, \{\
-        method: 'POST',\
-        body: JSON.stringify(\{ name \}),\
-        headers: \{ 'Content-Type': 'text/plain' \}\
-      \});\
-    \} catch (e) \{\}\
-\
-    document.getElementById('status').textContent = '\uc0\u1055 \u1077 \u1088 \u1077 \u1093 \u1086 \u1076 \u1080 \u1084  \u1082  \u1086 \u1087 \u1088 \u1086 \u1089 \u1091 ...';\
-    setTimeout(() => \{ window.location.href = SURVEY_URL; \}, 800);\
-  \}\
-\
-  document.getElementById('name').addEventListener('keydown', function(e) \{\
-    if (e.key === 'Enter') submit();\
-  \});\
-</script>\
-</body>\
-</html>}
+<script>
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzU8VsofIe4sy3HZXpV0X2kzceqSKYuY1LyJ15aAWzg7AwBBttvzE2imQXK3ZHvQ9zw/exec';
+  const SURVEY_URL = 'тут будет ссылка для опроса';
+
+  async function submit() {
+    const name = document.getElementById('name').value.trim();
+    if (!name) {
+      document.getElementById('status').textContent = 'Пожалуйста, введите ваше имя.';
+      return;
+    }
+
+    const btn = document.getElementById('btn');
+    btn.disabled = true;
+    document.getElementById('status').textContent = 'Сохраняем данные...';
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify({ name }),
+        headers: { 'Content-Type': 'text/plain' }
+      });
+    } catch (e) {}
+
+    document.getElementById('status').textContent = 'Переходим к опросу...';
+    setTimeout(() => { window.location.href = SURVEY_URL; }, 800);
+  }
+
+  document.getElementById('name').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') submit();
+  });
+</script>
+</body>
+</html>
